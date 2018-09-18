@@ -40,15 +40,12 @@
 
         cellVals.push(sumArr);
 
-//        for (j = 0; j < cellVals[i].length; j++) {
-//            yVal.push(parseInt(cellVals[1][j]));
-//        }
-
         var data = [
             {
                 x: cellVals[0],
                 y: cellVals[2],
-                type: 'bar'
+                type: 'bar',
+                marker: {color: 'rgba(0, 158, 115, 1)'}
             }
         ];
 
@@ -56,6 +53,8 @@
             title: "Female Fatalities by Age",
             height: 1000,
             width: 700,
+            xaxis: {title: 'Age (years)'},
+            yaxis: {title: 'Number of Women'}
         }
 
         Plotly.newPlot('graph05', data, layout);

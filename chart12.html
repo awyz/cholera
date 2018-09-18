@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>A Leaflet map!</title>
+    <title>Chart 12: Map of Pumps Versus Cholera Deaths</title>
     <link rel="stylesheet" href="./leaflet.css"/>
     <script src="./leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
@@ -19,6 +19,45 @@
 
 <script>
 
+    var dheaderRow, dheaderVals = [], dcellVals = [], dsumArr = [];
+    var pheaderRow, pheaderVals = [], pcellVals = [], psumArr = [];
+
+    // Deaths & their locations
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/choleraDeathLocations.csv?token=AcozuiuKid6AM_13ZLeMdP5_ZXzWmczYks5bqojVwA%3D%3D", function(err, rows) {
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+
+        headerRow = Plotly.d3.keys(rows[0]);
+
+        for (i = 0; i < dheaderRow.length; i++) {
+            dheaderVal = [dheaderRow[i]];
+            dheaderVals[i] = dheaderVal;
+            dcellVal = getData(rows, dheaderRow[i]);
+            dcellVals[i] = dcellVal;
+        }
+
+        for (j = 0; j < dcellVals[j].length; j++) {
+            var dsum = parseInt(dcellVals[1][j]) + parseInt(dcellVals[2][j]);
+            dsumArr.push(dsum);
+        }
+
+        dcellVals.push(dsumArr);
+
+
+
+    }); // End death locations
+
+
+    // Pumps locations
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/choleraPumpLocations.csv?token=AcozujvF8QlCJhPtaWQY3iCTggT0nfLDks5bqojvwA%3D%3D", function(err, rows){
+
+    });
+</script>
+
+<script>
     // initialize the map
     var mymap = L.map('mapid').setView([51.5074, -0.1278], 13);
 
@@ -29,6 +68,9 @@
         id: 'mapbox.streets',
         accessToken: 'pk.eyJ1IjoiYWxnZXJ3YXRlcmxvdyIsImEiOiJjam04MW1lZnMwOGFoM2tueDBxNjd1ZWZ5In0.yh_UuGBr5vRRttyDPmKDNQ\n'
     }).addTo(mymap);
+
+//    var marker = L.marker([51.5074, -0.1278]).addTo(mymap);
+    var marker1 = L.marker(dcellVals[1][0], dcellVals[1][2]).addTo(mymap);
 
 </script>
 </body>

@@ -47,8 +47,14 @@
             x: cellVals[0],
             y: yVal,
             type: 'scatter',
-            name: "Number of Attacks"
+            name: "Number of Attacks",
+            line: {
+                color: 'rgb(0,0,0)',
+                width: 3
+            }
         }
+
+        yVal = [];
 
         for (j = 0; j < cellVals[i].length; j++) {
             yVal.push(parseInt(cellVals[2][j]));
@@ -58,7 +64,10 @@
             x: cellVals[0],
             y: yVal,
             type: 'scatter',
-            name: "Number of Deaths"
+            name: "Number of Deaths",
+            line: {
+                color: 'rgb(150, 150, 150)'
+            }
         }
 
         var runningCount = 0;
@@ -73,7 +82,11 @@
             x: cellVals[0],
             y: runningCountArr,
             type: 'scatter',
-            name: "Total Amount of Attacks"
+            name: "Total Amount of Attacks",
+            line: {
+                color: 'rgba(240, 228, 66, 1)',
+                weight: 3
+            }
         }
 
         runningCount = 0;
@@ -88,14 +101,26 @@
             x: cellVals[0],
             y: runningCountArr,
             type: 'scatter',
-            name: "Total Amount of Deaths"
+            name: "Total Amount of Deaths",
+            line: {
+                color: 'rgba(0, 158, 115, 1)',
+                weight: 3
+            }
         }
 
-
+        var layout = {
+            title: 'Cholera Attacks and Deaths',
+            xaxis: {
+                title: 'Date'
+            },
+            yaxis: {
+                title: 'Number of People'
+            }
+        }
 
         var data = [numAttacks, numDeaths, totalAttacks, totalDeaths];
 
-        Plotly.newPlot('graph02', data);
+        Plotly.newPlot('graph02', data, layout);
 
     });
 
