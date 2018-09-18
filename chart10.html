@@ -1,0 +1,60 @@
+<head>
+    <title>Chart 10: Bar Chart of Female Census Data</title>
+    <script src="plotly-latest.min.js"></script>
+</head>
+<body>
+
+<div>
+    <div id="graph10">
+    </div>
+</div>
+
+</body>
+
+<script>
+
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/UKcensus1851.csv?token=AcozusL9Dyf_0UArexDlOpLpaTGdr69dks5bqlS5wA%3D%3D", function(err, rows){
+
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]) + parseInt(cellVals[2][j]);
+            sumArr.push(sum);
+        }
+
+        cellVals.push(sumArr);
+
+        var data = [
+            {
+                x: cellVals[0],
+                y: cellVals[2],
+                type: 'bar'
+            }
+        ];
+
+        var layout = {
+            title: "Female Census Data in UK 1851",
+            height: 1000,
+            width: 700,
+        }
+
+        Plotly.newPlot('graph10', data, layout);
+    });
+
+</script>
