@@ -37,16 +37,11 @@
         }
 
         cellVals.push(sumArr);
-
-        var dates = [];
         var yVal = [];
 
-//        for (i = 0; i < cellVals.length; i++) {
-            for (j = 0; j < cellVals[i].length; j++) {
-                yVal.push(parseInt(cellVals[1][j]));
-            }
-//        }
-
+        for (j = 0; j < cellVals[i].length; j++) {
+            yVal.push(parseInt(cellVals[1][j]));
+        }
 
         var numAttacks = {
             x: cellVals[0],
@@ -55,22 +50,45 @@
             name: "Number of Attacks"
         }
 
+        for (j = 0; j < cellVals[i].length; j++) {
+            yVal.push(parseInt(cellVals[2][j]));
+        }
+
         var numDeaths = {
             x: cellVals[0],
-            y: [7,1,3],
-            type: 'scatter'
+            y: yVal,
+            type: 'scatter',
+            name: "Number of Deaths"
+        }
+
+        var runningCount = 0;
+        var runningCountArr = [];
+
+        for (j = 0; j < cellVals[i].length; j++) {
+            runningCount += parseInt(cellVals[1][j]);
+            runningCountArr.push(runningCount);
         }
 
         var totalAttacks = {
             x: cellVals[0],
-            y: [1,3,6],
-            type: 'scatter'
+            y: runningCountArr,
+            type: 'scatter',
+            name: "Total Amount of Attacks"
+        }
+
+        runningCount = 0;
+        runningCountArr = [];
+
+        for (j = 0; j < cellVals[i].length; j++) {
+            runningCount += parseInt(cellVals[2][j]);
+            runningCountArr.push(runningCount);
         }
 
         var totalDeaths = {
             x: cellVals[0],
-            y: [0,2,8],
-            type: 'scatter'
+            y: runningCountArr,
+            type: 'scatter',
+            name: "Total Amount of Deaths"
         }
 
 
