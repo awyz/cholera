@@ -1,11 +1,11 @@
 <head>
-    <title>Chart 05: Bar Chart of Female Fatalities by Age Group</title>
+    <title>Chart 07: Pie Chart of Census Age Data for Men</title>
     <script src="plotly-latest.min.js"></script>
 </head>
 <body>
 
 <div>
-    <div id="graph05">
+    <div id="graph07">
     </div>
 </div>
 
@@ -13,7 +13,7 @@
 
 <script>
 
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/naplesCholeraAgeSexData.csv?token=Acozuh_lRoh4ezhiRaaWZmMv8uU8yW6Fks5bqfF8wA%3D%3D", function(err, rows){
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/UKcensus1851.csv?token=AcozusL9Dyf_0UArexDlOpLpaTGdr69dks5bqlS5wA%3D%3D", function(err, rows){
 
         function getData(rows, key) {
             return rows.map(function(specificRow) {
@@ -40,25 +40,21 @@
 
         cellVals.push(sumArr);
 
-//        for (j = 0; j < cellVals[i].length; j++) {
-//            yVal.push(parseInt(cellVals[1][j]));
-//        }
-
         var data = [
             {
-                x: cellVals[0],
-                y: cellVals[2],
-                type: 'bar'
+                values: cellVals[1],
+                labels: cellVals[0],
+                type: 'pie'
             }
         ];
 
         var layout = {
-            title: "Female Fatalities by Age",
+            title: "Census Data for Men in the UK, 1851",
             height: 1000,
             width: 700,
         }
 
-        Plotly.newPlot('graph05', data, layout);
+        Plotly.newPlot('graph07', data, layout);
     });
 
 </script>
