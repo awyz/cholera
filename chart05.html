@@ -1,0 +1,64 @@
+<head>
+    <title>Chart 04: Bar Chart of Female Fatalities by Age Group</title>
+    <script src="plotly-latest.min.js"></script>
+</head>
+<body>
+
+<div>
+    <div id="graph05">
+    </div>
+</div>
+
+</body>
+
+<script>
+
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/naplesCholeraAgeSexData.csv?token=Acozuh_lRoh4ezhiRaaWZmMv8uU8yW6Fks5bqfF8wA%3D%3D", function(err, rows){
+
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]) + parseInt(cellVals[2][j]);
+            sumArr.push(sum);
+        }
+
+        cellVals.push(sumArr);
+
+//        for (j = 0; j < cellVals[i].length; j++) {
+//            yVal.push(parseInt(cellVals[1][j]));
+//        }
+
+        var data = [
+            {
+                x: cellVals[0],
+                y: cellVals[2],
+                type: 'bar'
+            }
+        ];
+
+        var layout = {
+            title: "Female Fatalities by Age",
+            height: 1000,
+            width: 700,
+        }
+
+        Plotly.newPlot('graph05', data, layout);
+    });
+
+</script>
