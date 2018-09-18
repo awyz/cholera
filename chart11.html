@@ -46,8 +46,9 @@
 
         // Total up the men & women
         for (i = 0; i < cellVals[1].length; i++) {
-            men += cellVals[1][i];
-            women += cellVals[2][i];
+            men += parseInt(cellVals[1][i]);
+            women += parseInt(cellVals[2][i]);
+            console.log(men);
         }
 
         sex.push(men);
