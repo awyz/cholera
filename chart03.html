@@ -1,11 +1,11 @@
 <head>
-    <title>Chart 01: Table of Attacks and Deaths</title>
+    <title>Chart 03: Table of Fatalities by Age and Sex</title>
     <script src="plotly-latest.min.js"></script>
 </head>
 <body>
 
 <div>
-    <div id="graph01">
+    <div id="graph03">
     </div>
 </div>
 
@@ -13,7 +13,7 @@
 
 <script>
 
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/choleraDeaths.csv?token=Acozul-aF5x8qVd3mr8r4SN9lLz7Wgonks5bqVr8wA%3D%3D", function(err, rows){
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/naplesCholeraAgeSexData.csv?token=Acozuh_lRoh4ezhiRaaWZmMv8uU8yW6Fks5bqfF8wA%3D%3D", function(err, rows){
 
         function getData(rows, key) {
             return rows.map(function(specificRow) {
@@ -61,12 +61,12 @@
         }]
 
         var layout = {
-            title: "Cholera in London: Attacks and Deaths",
+            title: "Fatalities by Age and Sex",
             height: 1000,
             width: 700,
         }
 
-        Plotly.plot('graph01', data, layout);
+        Plotly.plot('graph03', data, layout);
     });
 
 </script>
