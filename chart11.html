@@ -48,17 +48,19 @@
         for (i = 0; i < cellVals[1].length; i++) {
             men += parseInt(cellVals[1][i]);
             women += parseInt(cellVals[2][i]);
-            console.log(men);
         }
 
         sex.push(men);
         sex.push(women);
 
+        colorArr: ['rgba(0, 158, 115, .75)', 'rgba(0, 114, 178, .75)'];
+
         var data = [
             {
                 values: sex,
                 labels: ['Men', 'Women'],
-                type: 'pie'
+                type: 'pie',
+                marker: { colors: ['rgba(0,158,115, .50)', 'rgba(0, 114, 178, .50)']}
             }
         ];
 

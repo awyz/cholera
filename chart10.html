@@ -44,7 +44,8 @@
             {
                 x: cellVals[0],
                 y: cellVals[2],
-                type: 'bar'
+                type: 'bar',
+                marker: {color: 'rgba(0, 158, 115, .85)'}
             }
         ];
 
@@ -52,6 +53,8 @@
             title: "Female Census Data in UK 1851",
             height: 1000,
             width: 700,
+            xaxis: {title: 'Age Group (Years)'},
+            yaxis: {title: 'Number of Women'}
         }
 
         Plotly.newPlot('graph10', data, layout);
