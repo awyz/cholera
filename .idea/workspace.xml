@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be98a7-f351-4e39-a887-6ed66092b2c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chart08.html" afterPath="$PROJECT_DIR$/chart08.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="537" column="41" lean-forward="false" selection-start-line="537" selection-start-column="41" selection-end-line="537" selection-end-column="41" />
+            <state relative-caret-position="404">
+              <caret line="588" column="188" lean-forward="false" selection-start-line="588" selection-start-column="188" selection-end-line="588" selection-end-column="188" />
               <folding>
                 <element signature="n#style#0;n#div#12;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#script#0;n#html#0;n#!!top" expanded="false" />
@@ -27,12 +26,11 @@
                 <element signature="n#script#3;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#4;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#5;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#8;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-                <marker date="1537379751146" expanded="true" signature="25406:25412" ph="©" />
+                <marker date="1537381033633" expanded="true" signature="25813:25819" ph="©" />
               </folding>
             </state>
           </provider>
@@ -595,12 +593,11 @@
             <element signature="n#script#3;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#4;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#5;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#8;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-            <marker date="1537379751146" expanded="true" signature="25406:25412" ph="©" />
+            <marker date="1537381033633" expanded="true" signature="25813:25819" ph="©" />
           </folding>
         </state>
       </provider>
@@ -617,12 +614,11 @@
             <element signature="n#script#3;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#4;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#5;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#8;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-            <marker date="1537379751146" expanded="true" signature="25406:25412" ph="©" />
+            <marker date="1537381033633" expanded="true" signature="25813:25819" ph="©" />
           </folding>
         </state>
       </provider>
@@ -731,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="537" column="41" lean-forward="false" selection-start-line="537" selection-start-column="41" selection-end-line="537" selection-end-column="41" />
+        <state relative-caret-position="404">
+          <caret line="588" column="188" lean-forward="false" selection-start-line="588" selection-start-column="188" selection-end-line="588" selection-end-column="188" />
           <folding>
             <element signature="n#style#0;n#div#12;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#script#0;n#html#0;n#!!top" expanded="false" />
@@ -741,12 +737,11 @@
             <element signature="n#script#3;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#4;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#5;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#8;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-            <marker date="1537379751146" expanded="true" signature="25406:25412" ph="©" />
+            <marker date="1537381033633" expanded="true" signature="25813:25819" ph="©" />
           </folding>
         </state>
       </provider>

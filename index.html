@@ -71,10 +71,10 @@
         <p>This table shows the amount of men and women per age group living in the UK in 1851.<br>The total column shows the total amount of people per age group who lived in this area at this time.</p>
         <hr>
         <div align="center" id="graph07"></div>
-        <p>This pie chart shows a breakdown of different age groups for men living in the UK in 1851. <br>As shown, the younger age groups tend to be larger.</p>
+        <p>This pie chart shows a breakdown of different age groups for men living in the UK in 1851. <br>As shown, the younger age groups tend to be larger.<br>Lighter colors indicate younger age groups, while darker colors indicate older groups.</p>
         <hr>
         <div align="center" id="graph08"></div>
-        <p>This pie chart shows a breakdown of different age groups for women living in 1851 UK.<br>Older age groups tend to have less people in them, while younger groups have more.</p>
+        <p>This pie chart shows a breakdown of different age groups for women living in 1851 UK.<br>Lighter colors indicate younger age groups, while darker colors indicate older groups.<br>Older age groups tend to have less people in them, while younger groups have more.</p>
         <hr>
         <div align="center" id="graph09"></div>
         <p>This bar graph shows the amount of males (y axis) living in the UK in 1851 according to age group (x axis). <br>According to this graph, during this time period, the younger the age group, the more people there are in that group.</p>
@@ -526,7 +526,7 @@
     cellVals.push(sumArr);
 
     var ultimateColors = [
-        ['rgb: 247,252,253', 'rgb: 224,236,244','rgb: 191,211,230','rgb: 158,188,218','rgb: 140,150,198','rgb: 140,107,177','rgb: 136,65,157','rgb: 129,15,124','rgb: 77,0,75'], []
+        'rgb(247,252,253)', 'rgb(224,236,244)','rgb(191,211,230)','rgb(158,188,218)','rgb(140,150,198)','rgb(140,107,177)','rgb(136,65,157)','rgb(129,15,124)','rgb(77,0,75)'
     ]
 
     var data = [
@@ -535,7 +535,7 @@
             labels: cellVals[0],
             type: 'pie',
             marker: {
-                colors: ultimateColors[0]
+                colors: ultimateColors
             }
         }
     ];
@@ -585,6 +585,9 @@
                 values: cellVals[2],
                 labels: cellVals[0],
                 type: 'pie',
+                marker: {
+                    colors: ['rgb(247,252,253)', 'rgb(229,245,249)','rgb(204,236,230)','rgb(153,216,201)','rgb(102,194,164)','rgb(65,174,118)','rgb(35,139,69)','rgb(0,109,44)','rgb(0,68,27)']
+                }
             }
         ];
 
