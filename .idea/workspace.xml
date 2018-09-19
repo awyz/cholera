@@ -16,7 +16,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
+            <state relative-caret-position="655">
               <caret line="259" column="22" lean-forward="false" selection-start-line="259" selection-start-column="22" selection-end-line="259" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#12;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -29,7 +29,7 @@
                 <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-                <marker date="1537381781233" expanded="true" signature="25788:25794" ph="©" />
+                <marker date="1537382212368" expanded="true" signature="25797:25803" ph="©" />
               </folding>
             </state>
           </provider>
@@ -131,6 +131,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="952" />
@@ -595,7 +601,7 @@
             <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-            <marker date="1537381781233" expanded="true" signature="25788:25794" ph="©" />
+            <marker date="1537382212368" expanded="true" signature="25797:25803" ph="©" />
           </folding>
         </state>
       </provider>
@@ -615,7 +621,7 @@
             <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-            <marker date="1537381781233" expanded="true" signature="25788:25794" ph="©" />
+            <marker date="1537382212368" expanded="true" signature="25797:25803" ph="©" />
           </folding>
         </state>
       </provider>
@@ -724,7 +730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
+        <state relative-caret-position="655">
           <caret line="259" column="22" lean-forward="false" selection-start-line="259" selection-start-column="22" selection-end-line="259" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#12;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -737,7 +743,7 @@
             <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#10;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#11;n#html#0;n#!!top" expanded="false" />
-            <marker date="1537381781233" expanded="true" signature="25788:25794" ph="©" />
+            <marker date="1537382212368" expanded="true" signature="25797:25803" ph="©" />
           </folding>
         </state>
       </provider>
