@@ -45,33 +45,6 @@
 
 <hr>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            a
-        </div>
-        <div class="col">
-            b
-        </div>
-        <div class="col">
-            c
-        </div>
-        <div class="col">
-            d
-        </div>
-        <div class="col">
-            d
-        </div>
-        <div class="col">
-            d
-        </div>
-        <div class="col">
-            d
-        </div>
-    </div>
-</div>
-
-
 <!--<div class="scrolling-wrapper">-->
     <!--<div class="center container-fluid">-->
         <hr>
@@ -89,24 +62,32 @@
         <hr>
 
         <div align="center" id="graph04"></div>
-        <p>This bar graph shows the different amounts of fatalities for males per age group.<br>This graph demonstrates that people from older age groups tend to die from cholera<br>more than younger victims. </p>
+        <p>This bar graph shows the different amounts of fatalities for males per age group.<br>This graph demonstrates that people from older age groups tend to die from cholera<br>more than younger victims. <br>The x axis represents the different age group, while the y axis shows the number of dead people.</p>
         <hr>
         <div align="center" id="graph05"></div>
-        <p>This bar graph shows the different amount of fatalities for females per age group.<br>Once again, aside from females who are between the age of 2-5 years who seem to also fall victim to cholera more than their peers, <br>there is an upward trend in which age group dies to the disease.</p>
+        <p>This bar graph shows the different amount of fatalities for females per age group.<br>Once again, aside from females who are between the age of 2-5 years who seem to also fall victim to cholera more than their peers, <br>there is an upward trend in which age group dies to the disease.<br>The x axis represents the different age groups, while the y axis represents the number of dead.</p>
         <hr>
         <div align="center" id="graph06"></div>
+        <p>This table shows the amount of men and women per age group living in the UK in 1851.<br>The total column shows the total amount of people per age group who lived in this area at this time.</p>
         <hr>
-        <div align="center" id="graph07"></div> hello
+        <div align="center" id="graph07"></div>
+        <p>This pie chart shows a breakdown of different age groups for men living in the UK in 1851. <br>As shown, the younger age groups tend to be larger.</p>
         <hr>
-        <div align="center" id="graph08"></div> welcome
+        <div align="center" id="graph08"></div>
+        <p>This pie chart shows a breakdown of different age groups for women living in 1851 UK.<br>Older age groups tend to have less people in them, while younger groups have more.</p>
         <hr>
         <div align="center" id="graph09"></div>
+        <p>This bar graph shows the amount of males (y axis) living in the UK in 1851 according to age group (x axis). <br>According to this graph, during this time period, the younger the age group, the more people there are in that group.</p>
         <hr>
         <div align="center" id="graph10"></div>
+        <p>This bar graph shows the amount of women living in the UK in 1851 (y axis) per age group (x axis). <br>Once again, the younger the age group, the larger the group.</p>
         <hr>
         <div align="center" id="graph11"></div>
+        <p>This pie chart demonstrates the ratio between men and women living in the UK in 1851.<br>The blue represents the amount of women, while green represents the amount of men.<br>According to this chart, in 1851 there were more women living in the UK than men. </p>
         <hr>
         <div align="center" id="mymap" style="align-content: center; width: 600px; height: 500px;"></div>
+
+        <p>This map shows 2 things: the locations of each death by cholera in London, and the location of pumps in London as well.<br>The black circles represent where pumps were located in 1851. <br>For deaths, the yellow circle means 1 - 2 people died at that location, orange indicates 3 - 6 died there, while red represents 7+ deaths.</p>
         <hr>
 </body>
 
@@ -517,9 +498,106 @@
 </script>
 
 <!-- Chart 07 -->
-hello
+<script>    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/UKcensus1851.csv?token=AcozusL9Dyf_0UArexDlOpLpaTGdr69dks5bqlS5wA%3D%3D", function(err, rows){
+
+    function getData(rows, key) {
+        return rows.map(function(specificRow) {
+            return specificRow[key];
+        });
+    }
+
+    var headerRow = Plotly.d3.keys(rows[0]);
+    var headerVals = [];
+    var cellVals = [];
+    var sumArr = [];
+
+    for (i = 0; i < headerRow.length; i++) {
+        headerVal = [headerRow[i]];
+        headerVals[i] = headerVal;
+        cellVal = getData(rows, headerRow[i]);
+        cellVals[i] = cellVal;
+    }
+
+    for (j = 0; j < cellVals[1].length; j++){
+        var sum = parseInt(cellVals[1][j]) + parseInt(cellVals[2][j]);
+        sumArr.push(sum);
+    }
+
+    cellVals.push(sumArr);
+
+    var ultimateColors = [
+        ['rgb: 247,252,253', 'rgb: 224,236,244','rgb: 191,211,230','rgb: 158,188,218','rgb: 140,150,198','rgb: 140,107,177','rgb: 136,65,157','rgb: 129,15,124','rgb: 77,0,75'], []
+    ]
+
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+            marker: {
+                colors: ultimateColors[0]
+            }
+        }
+    ];
+
+    var layout = {
+        title: "Census Data for Men in the UK, 1851",
+        height: 1000,
+        width: 700,
+    }
+
+    Plotly.newPlot('graph07', data, layout);
+});
+
+</script>
 <!-- Chart 08 -->
-welcome
+<script>
+
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/cholera/master/Cholera/UKcensus1851.csv?token=AcozusL9Dyf_0UArexDlOpLpaTGdr69dks5bqlS5wA%3D%3D", function(err, rows){
+
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]) + parseInt(cellVals[2][j]);
+            sumArr.push(sum);
+        }
+
+        cellVals.push(sumArr);
+
+        var data = [
+            {
+                values: cellVals[2],
+                labels: cellVals[0],
+                type: 'pie',
+            }
+        ];
+
+        var layout = {
+            title: "Census Data for Women in the UK, 1851",
+            height: 1000,
+            width: 700,
+        }
+
+        Plotly.newPlot('graph08', data, layout);
+    });
+
+</script>
 <!-- Chart 09 -->
 <script>
 
