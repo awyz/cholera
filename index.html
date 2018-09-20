@@ -144,8 +144,8 @@
 
         var layout = {
             title: "Cholera Attacks and Deaths",
-            height: screen.height,
-            width: screen.width *.75,
+            height: 700,
+            width: 700,
         }
 
         Plotly.plot('graph01', data, layout);
@@ -258,8 +258,8 @@
             yaxis: {
                 title: 'Number of People'
             },
-            height: screen.height *.75,
-            width: screen.width * .90,
+            height: 700,
+            width: 975,
         }
 
         var data = [numAttacks, numDeaths, totalAttacks, totalDeaths];
@@ -322,8 +322,8 @@
 
         var layout = {
             title: "Fatalities by Age and Sex in Naples",
-            height: screen.height *.5,
-            width: screen.width * .5,
+            height: 475,
+            width: 700,
         }
 
         Plotly.plot('graph03', data, layout);
@@ -374,8 +374,8 @@
 
         var layout = {
             title: "Male Fatalities by Age in Naples",
-            height: screen.height * .75,
-            width: screen.width * .6,
+            height: 700,
+            width: 800,
             xaxis: { title: 'Age (years)'},
             yaxis: { title: 'Number of People'}
         }
@@ -426,8 +426,8 @@
 
         var layout = {
             title: "Female Fatalities by Age in Naples",
-            height: screen.height * .75,
-            width: screen.width * .6,
+            height: 700,
+            width: 800,
             xaxis: {title: 'Age (years)'},
             yaxis: {title: 'Number of Women'}
         }
@@ -489,8 +489,8 @@
 
         var layout = {
             title: "Census Data: Men and Women in the UK, 1851",
-            height: screen.height * .5,
-            width: screen.width * .5,
+//            height: 1000,
+            width: 700,
         }
 
         Plotly.plot('graph06', data, layout);
@@ -542,8 +542,8 @@
 
     var layout = {
         title: "Census Data for Men in the UK, 1851",
-        height: screen.height * .75,
-        width: screen.width * .5,
+        height: 900,
+        width: 700,
     }
 
     Plotly.newPlot('graph07', data, layout);
@@ -593,8 +593,8 @@
 
         var layout = {
             title: "Census Data for Women in the UK, 1851",
-            height: screen.height * .75,
-            width: screen.width * .5,
+            height: 1000,
+            width: 700,
         }
 
         Plotly.newPlot('graph08', data, layout);
@@ -644,8 +644,8 @@
 
         var layout = {
             title: "Male Census Data in UK 1851",
-            height: screen.height * .75,
-            width: screen.width * .6,
+            height: 700,
+            width: 800,
             xaxis: {title: 'Age Group (Years)'},
             yaxis: {title: 'Number of Men'}
         }
@@ -696,8 +696,8 @@
 
         var layout = {
             title: "Female Census Data in UK 1851",
-            height: screen.height * .75,
-            width: screen.width * .6,
+            height: 700,
+            width: 800,
             xaxis: {title: 'Age Group (Years)'},
             yaxis: {title: 'Number of Women'}
         }
@@ -763,8 +763,8 @@
 
         var layout = {
             title: "Total Men versus Women in the UK, 1851",
-            height: screen.height * .75,
-            width: screen.width * .5,
+            height: 1000,
+            width: 700,
         }
 
         Plotly.newPlot('graph11', data, layout);
@@ -780,7 +780,7 @@
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery Â© <a href="https://www.mapbox.com/">Mapbox</a>',
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'
     }).addTo(mymap);
 
